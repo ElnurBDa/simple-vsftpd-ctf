@@ -1,0 +1,22 @@
+version: '3'
+services:
+  web-terminal:
+    image: raonigabriel/web-terminal:latest
+    ports:
+      - "80:7681"
+    restart: always
+    networks:
+      - custom-network
+
+  vsftpd:
+    build:
+      context: ./vsftpd-cve-2011-2523/.
+    image: vsftpd-cve-2011-2523
+    networks:
+      - custom-network
+    restart: always
+
+networks:
+  custom-network:
+    driver: bridge
+
