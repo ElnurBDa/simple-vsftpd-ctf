@@ -13,7 +13,7 @@ services:
       - custom-network
     hostname: getrootflag
 
-  vsftpd:
+  ctf:
     build:
       context: ./vsftpd-cve-2011-2523/.
     image: vsftpd-cve-2011-2523
