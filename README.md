@@ -1,7 +1,7 @@
 - https://github.com/raonigabriel/web-terminal - Web Terminal
 - https://github.com/ElnurBDa/vulhub/ - vsftpd
 
-```bash
+```yaml
 version: '3'
 services:
   web-terminal:
@@ -25,4 +25,9 @@ services:
 networks:
   custom-network:
     driver: bridge
+```
+
+to run it:
+```bash
+docker compose up -d
 ```
